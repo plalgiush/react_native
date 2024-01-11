@@ -11,4 +11,4 @@ export const axios = Axios.create({
   withCredentials: true,
 });
 
-export const baseURL = apiUrl;
+export const baseURL = axios;
