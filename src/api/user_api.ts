@@ -1,4 +1,4 @@
-import {axios, baseURL} from '../config/axios';
+import { axios, baseURL } from '../config/axios';
 
 export const user_login = async (data: any) => {
   try {
