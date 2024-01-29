@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const stylesInput = StyleSheet.create({
   textInput: {
+    width: '100%',
     backgroundColor: '#fff',
     borderRadius: 8,
     shadowColor: '#000',
@@ -15,6 +16,7 @@ export const stylesInput = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 16,
     marginVertical: 8,
+    marginHorizontal: 8,
   },
   errorText: {
     fontSize: 10,
