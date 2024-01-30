@@ -1,9 +1,9 @@
 import Axios from 'axios';
 
-const apiUrl: string = 'http://localhost:8000';
+const baseURL: string | undefined = process.env.BASE_URL;
 
 export const axios = Axios.create({
-  baseURL: `${apiUrl}/api/v1/`,
+  baseURL: `${baseURL}/api/v1/`,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
   },
@@ -11,4 +11,4 @@ export const axios = Axios.create({
   withCredentials: true,
 });
 
-export const baseURL = axios;
+export const apiUrl = axios;
