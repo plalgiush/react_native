@@ -8,15 +8,14 @@ const Splash = () => {
   const { navigate } = useNavigation<StackNavigationProp<ParamListBase>>();
 
   useEffect(() => {
-    handleGetToken();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    async function fetchTocken() {
+      const dataToken = await AsyncStorage.getItem('accessToken');
 
-  const handleGetToken = async () => {
-    const dataToken = await AsyncStorage.getItem('accessToken');
+      !dataToken ? navigate('Login') : navigate('HomeScreen');
+    }
 
-    !dataToken ? navigate('Login') : navigate('HomeScreen');
-  };
+    fetchTocken();
+  }, [navigate]);
 
   return (
     <View>
