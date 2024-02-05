@@ -41,7 +41,7 @@ const LoginForm = () => {
           {/* <FontAwesome name="envelope" color="#00716F" size={24} /> */}
           <Input
             value={email}
-            onChange={e => setEmail(e.nativeEvent.text)}
+            onChangeText={e => setEmail(e)}
             placeholder="Email Address"
             keyboardType="email-address"
             secureTextEntry={false}
@@ -51,7 +51,7 @@ const LoginForm = () => {
           {/* <FontAwesome name="lock" color="#00716F" size={24} /> */}
           <Input
             value={password}
-            onChange={e => setPassword(e.nativeEvent.text)}
+            onChangeText={e => setPassword(e)}
             placeholder="Password"
             secureTextEntry
             keyboardType={undefined}

@@ -1,9 +1,8 @@
 import Axios from 'axios';
-
-const baseURL: string | undefined = process.env.BASE_URL;
+import { BASE_URL } from '@env';
 
 export const axios = Axios.create({
-  baseURL: `${baseURL}/api/v1/`,
+  baseURL: BASE_URL,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
   },
@@ -11,4 +10,4 @@ export const axios = Axios.create({
   withCredentials: true,
 });
 
-export const apiUrl = axios;
+export const baseURL = axios.defaults.baseURL;

@@ -46,7 +46,7 @@ const SignUpForm = () => {
             {/* <FontAwesome name="user" color="#00716F" size={24} /> */}
             <Input
               value={name}
-              onChange={e => setName(e.nativeEvent.text)}
+              onChangeText={e => setName(e)}
               placeholder="Full Name"
               keyboardType="default"
               secureTextEntry={false}
@@ -56,7 +56,7 @@ const SignUpForm = () => {
             {/* <FontAwesome name="envelope" color="#00716F" size={24} /> */}
             <Input
               value={email}
-              onChange={e => setEmail(e.nativeEvent.text)}
+              onChangeText={e => setEmail(e)}
               placeholder="Email Address"
               keyboardType="email-address"
               secureTextEntry={false}
@@ -66,7 +66,7 @@ const SignUpForm = () => {
             {/* <FontAwesome name="lock" color="#00716F" size={24} /> */}
             <Input
               value={password}
-              onChange={e => setPassword(e.nativeEvent.text)}
+              onChangeText={e => setPassword(e)}
               placeholder="Password"
               secureTextEntry
               keyboardType={undefined}
@@ -75,8 +75,8 @@ const SignUpForm = () => {
           <View style={stylesSignUpForm.Field}>
             {/* <FontAwesome name="lock" color="#00716F" size={24} /> */}
             <Input
-              value={password}
-              onChange={e => setPasswordConfirmation(e.nativeEvent.text)}
+              value={passwordConfirmation}
+              onChangeText={e => setPasswordConfirmation(e)}
               placeholder="Confirm Password"
               secureTextEntry
               keyboardType={undefined}

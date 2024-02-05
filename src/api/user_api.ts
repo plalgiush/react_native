@@ -1,8 +1,8 @@
-import { axios, apiUrl } from '../config/axios';
+import { axios, baseURL } from '../config/axios';
 
 export const user_login = async (data: any) => {
   try {
-    const result = await axios(`${apiUrl}login`, {
+    const result = await axios(`${baseURL}login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ export const user_login = async (data: any) => {
 
 export const user_register = async (data: any) => {
   try {
-    const result = await axios(`${apiUrl}register`, {
+    const result = await axios(`${baseURL}register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
